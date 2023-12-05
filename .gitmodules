@@ -1,6 +1,8 @@
 [submodule "msg-grid-auth"]
 	path = msg-grid-auth
 	url = https://github.com/VAISHAKH-GK/msg-grid-auth
+	branch = main
 [submodule "msg-grid-email"]
 	path = msg-grid-email
 	url = https://github.com/VAISHAKH-GK/msg-grid-email
+	branch = main
