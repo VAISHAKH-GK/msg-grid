@@ -7,6 +7,6 @@ spec:
     app: msg-grid-auth
   type: ClusterIP
   ports:
-    - port: 8000
+    - port: 8001
       targetPort: 9000
       protocol: TCP
