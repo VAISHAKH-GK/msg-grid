@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msg-grid-email-service
+  labels:
+    app: msg-grid-email-service
+
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: msg-grid-email
+  template:
+    metadata:
+      labels:
+        app: msg-grid-email
+    spec:
+      containers:
+        - name: msg-grid-email
+          image: vaishakhgk/msg-grid-email
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: msg-grid-email-configmap
